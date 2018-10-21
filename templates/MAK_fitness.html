@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MAK Fitness</title>
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/MAK_style.css')}}">
+
+</head>
+<body>
+<div class="header">
+<h1><img src="{{url_for('static', filename='mak_logo.png')}}"><span class="mak">MAK</span><span class="fitness">Fitness</span></h1>
+</div>
+<div class="navigation">
+	<ul>
+  <li><a class="active" href="#home">Registration</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li style="float:right"><a href="#about">About</a></li>
+</ul>
+</div>
+<div id="date_reg"><p id="date"></p> <p class="reg" style ="color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;"> Registration Number :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{reg_num[0]}}</p></div>
+<script src="{{url_for('static', filename='js/date.js')}}" type="text/javascript"></script>
+<h2>Detials Required</h2>
+<div class="registration">
+	<form action="http://localhost:5000/login" method = "post">
+  <label class="fn">First Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+  <input type="text" name="firstname" placeholder="First Name" class="first" required>
+  <br>
+  <label class="fn">Middle Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+  <input type="text" name="middlename" placeholder="Middle Name (optional)" class="first">
+  <br>
+ <label class="fn">Last Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+  <input type="text" name="lastname" placeholder="Last Name" class="first" required>
+  <br><br>
+  <label class="fn">Address:</label>
+  <textarea type="text" name="address" placeholder="address" class="address" required> </textarea>
+  <br><br>
+  <label class="fn">Phone Number:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+  <input type="number" name="phone" placeholder="XXXXXXXXXX" class="first" required>
+  <br>
+  <label class="fn">Date of Birth:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+   <input type="date" name="dob" placeholder="DD/MM/YYYY" id="dob" required>
+   <br>
+ <label class="fn">Occupation:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+  <input type="text" name="occup" placeholder="" class="first" onClick="JavaScript:ageCount()"required>
+  <br>
+ <label class="fn">Email ID:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+  <input type="email" name="email" placeholder="eg. moin.ahmend@mak.com" class="eid" required>
+  <br><br><br>
+  <label class="fn">Sex:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+  <label class="sn">Male&nbsp;&nbsp;&nbsp;</label><input type="radio" name="gender" class="cr" value="male">
+  <label class="sn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Female&nbsp;&nbsp;&nbsp;</label><input type="radio" name="gender" class="cr" value="female">
+  <br><br>
+  <label class="fn">Age:&nbsp;&nbsp;&nbsp;</label><input type="number" name="age" id="ageId" placeholder="">
+  
+  <label class="fn">&nbsp;&nbsp;&nbsp;Heigth:&nbsp;&nbsp;&nbsp;</label><input type="text" name="Heigth" placeholder="X'X" class="ag">
+  <label class="fn">&nbsp;&nbsp;&nbsp;Weigth:&nbsp;&nbsp;&nbsp;</label><input type="number" name="Weigth" placeholder="" class="ag">
+  <label class="fn">&nbsp;&nbsp;&nbsp;Blood Group:&nbsp;&nbsp;&nbsp;</label><input type="text" name="bg" placeholder="" class="ag">
+  <br><br>
+  <label class="fn">Health Problems (If Any):</label>
+  <textarea type="text" name="hp" placeholder="Health problem" class="hp"> </textarea>
+  <br><br><br>
+  <label class="fn">Cardio:&nbsp;&nbsp;&nbsp;</label><input type="checkbox" name="training" class="cr" value="Cardio">
+  <label class="fn">&nbsp;&nbsp;&nbsp;Weigth Gain:&nbsp;&nbsp;&nbsp;</label><input type="checkbox" name="training" class="cr" value="Weigth Gain">
+  <label class="fn">&nbsp;&nbsp;&nbsp;Weigth Loss:&nbsp;&nbsp;&nbsp;</label><input type="checkbox" name="training" class="cr" value="Weigth Loss">
+  <label class="fn">&nbsp;&nbsp;&nbsp;Yoga:&nbsp;&nbsp;&nbsp;</label><input type="checkbox" name="training" class="cr" value="Yoga">
+  <br><br><br>
+  <input type="submit" value="Submit" class="submit" style="background-color: dodgerblue; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    text-align: center;">
+</form> 
+</div>
+
+</body>
+</html>
